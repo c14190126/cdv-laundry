@@ -28,6 +28,18 @@ class TransaksiController extends Controller
         "pegawai" => pegawai::all()]);
     }
 
+    public function nota($id)
+    {
+        $transaksi= transaksi::where('id','=',$id)->first();
+        $pelanggan= Pelanggan::where('id','=',$transaksi->id_pelanggan)->first();
+        $detail= detail_transaksi::where('id_transaksi','=',$id)->get();
+        return view("nota", 
+        ["transaksi" => $transaksi,
+        "pelanggan" => $pelanggan,
+        "detail" => $detail,
+    ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

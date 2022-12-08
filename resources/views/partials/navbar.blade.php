@@ -20,7 +20,7 @@
         <a class=nav-link href="{{ url('/pegawai') }}">Pegawai</a>      
         <a class=nav-link href="{{ url('/absen') }}">Presensi</a>      
         <a class= nav-link href="{{url('/punishment')}}">Pelanggaran</a>      
-        <a class= nav-link href="{{url('/gaji')}}">Gaji</a>      
+        <a class= nav-link href="{{url('/listgaji')}}">Gaji</a>      
     </div>
     <button class="dropdown-btn">Transaksi
         <i class="fa fa-caret-down"></i>

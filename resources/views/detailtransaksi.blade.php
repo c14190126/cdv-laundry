@@ -142,7 +142,7 @@
                     <div class="form-group row">
                         <label for="Total" class="col-sm-4 col-form-label" style="font-weight: bold;">Total</label>
                         <div class="col-sm-8" id="total">
-                            <input type="text" class="form-control-plaintext" name="total"  value="Rp{{ number_format($detail->total) }}" readonly>
+                            <input type="text" class="form-control-plaintext" name=""value="Rp{{ number_format($detail->total) }}" readonly>
                         </div>
                     </div>
                 </div>
@@ -172,7 +172,8 @@
                     <div class="form-group row">
                         <label for="Total" class="col-sm-4 col-form-label" style="font-weight: bold;">Total</label>
                         <div class="col-sm-8" id="total">
-                            <input type="text" class="form-control-plaintext" name="total"  value="Rp{{ number_format($total) }}" readonly>
+                            <input type="text" class="form-control-plaintext" name=""  value="Rp{{ number_format($total) }}" readonly>
+                            <input type="hidden" class="form-control-plaintext" name="total"  value="{{ ($total) }}" readonly>
                         </div>
                     </div>
                 </div>
@@ -181,7 +182,7 @@
             <div class="row">
                 <div class="col text-right" style="margin:10px">
                     <button type="submit" class="btn btn-success">Save </button>
-                    <button type="button" class="btn btn-primary" onclick="window.open('struktransaksi.php','Print QR','width=500,height=500,toolbar=no,location=no,directories=no,status=no, menubar=no, scrollbars=no,resizable=no,copyhistory=no')">Print Pembayaran</button>
+                    <button type="button" class="btn btn-primary" onclick="window.open('{{ url('/nota/'.$detail->id) }}')">Print Pembayaran</button>
                 </div>
             </div>
         </form>

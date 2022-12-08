@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\cabang::factory(10)->create();
 
         cabang::create([
+            'id'=>'1',
             'nama'=>'Darjo',
             'alamat'=>'sidoarjo',
             'no_telepon'=>'08956231223',
@@ -33,6 +34,7 @@ class DatabaseSeeder extends Seeder
         ]);
         
         pegawai::create([
+            'id'=>'1',
             'nama'=> 'david',
             'id_cabang'=> 1,
             'alamat'=>'dukuh kupang',

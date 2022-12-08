@@ -85,7 +85,10 @@
                 </form>
             </div>
         </div>
+        
         <div class="container" id="container-table">
+            <div id="map" style="height:200px; width: 400px;" class="my-3"></div>
+
             <div class="table-responsive">
                 <table class="table table-bordered table-hover datatab">
                     <thead class="custom-thead-bg">
@@ -115,7 +118,6 @@
                         @endforeach
                     </tbody>
                 </table>
-                <div id="map" style="height:200px; width: 400px;" class="my-3"></div>
     
             </div>
         </div>

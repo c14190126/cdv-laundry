@@ -46,6 +46,7 @@ Route::post('/addpelanggan', [PelangganController::class,'store']);
 
 //transaksi
 Route::get('/transaksi', [TransaksiController::class,'index'])->middleware(('auth'));
+Route::get('/nota/{id}', [TransaksiController::class,'nota'])->middleware(('auth'));
 Route::post('/transaksi', [TransaksiController::class,'store']);
 Route::put('/save_transaksi/{transaksi:id_transaksi}', [TransaksiController::class,'update']);
 
@@ -62,7 +63,9 @@ Route::get('/promo', [PromoController::class,'index'])->middleware(('auth'));
 Route::delete('/promo/{promo:nama_promo}', [PromoController::class,'destroy']);
 
 //gaji
+Route::get('/listgaji', [GajiController::class,'indexlist'])->middleware(('auth'));
 Route::get('/gaji', [GajiController::class,'index'])->middleware(('auth'));
+Route::get('/detailgaji/{gaji::id}', [GajiController::class,'indexdetailgaji'])->middleware(('auth'));
 Route::get('/gaji/fetchgaji', [GajiController::class,'fetch']);
 Route::post('/addgaji', [GajiController::class,'store']);
 

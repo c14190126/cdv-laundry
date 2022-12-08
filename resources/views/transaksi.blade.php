@@ -88,7 +88,7 @@
                         <td>{{ $transaksis->tanggal }}</td>
                         <td>{{ $transaksis->status_pembayaran }}</td>
                         <td>
-                            <button type="submit" class="btn btn-primary" onclick="location.href='/transaksi/{{ $transaksis->id_transaksi }}'">Detail Transaksi</button>
+                            <button type="submit" class="btn btn-primary" onclick="location.href='{{ url('/transaksi/'.$transaksis->id_transaksi)}}'">Detail Transaksi</button>
                             <form action="{{ url('/transaksi/'.$transaksis->id_transaksi) }}" method="post" class="d-inline">
                                 @method('delete')
                                 @csrf
